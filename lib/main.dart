@@ -70,18 +70,58 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      body: Column(
-        (
-          children: [
-            Text('PESU'),
-            Text('Hello', style: TextStyle(
-              color: Colors.amber,
-              fontSize: 36.0
-            ))
-            ]
-          ]
-        )
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      body: SafeArea(
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                'PESU',
+                style: TextStyle(
+                    fontSize: 36.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue,
+                    fontFamily: 'Lato'),
+              ),
+              Image.asset(
+                'assets/images/_MG_7737 - Copy.jpg',
+                height: 200.0,
+                width: 200.0,
+              ),
+              Text(
+                'Rojas',
+                style: TextStyle(
+                    fontSize: 24.0,
+                    color: Color(0xff3596be),
+                    fontFamily: 'Lato'),
+              ),
+              Text(
+                'PES3328304938092',
+                style: TextStyle(
+                    fontSize: 24.0,
+                    color: Color(0xff3596be),
+                    fontFamily: 'Lato'),
+              ),
+              Text(
+                '953874573249030',
+                style: TextStyle(
+                    fontSize: 24.0,
+                    color: Color(0xff3596be),
+                    fontFamily: 'Lato'),
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    print('present');
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.green,
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Text('Present'),
+                  ))
+            ]),
+      ),
     );
   }
 }
