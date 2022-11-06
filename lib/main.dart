@@ -71,56 +71,75 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return Scaffold(
       body: SafeArea(
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                'PESU',
-                style: TextStyle(
-                    fontSize: 36.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.blue,
-                    fontFamily: 'Lato'),
-              ),
-              Image.asset(
-                'assets/images/_MG_7737 - Copy.jpg',
-                height: 200.0,
-                width: 200.0,
-              ),
-              Text(
-                'Rojas',
-                style: TextStyle(
-                    fontSize: 24.0,
-                    color: Color(0xff3596be),
-                    fontFamily: 'Lato'),
-              ),
-              Text(
-                'PES3328304938092',
-                style: TextStyle(
-                    fontSize: 24.0,
-                    color: Color(0xff3596be),
-                    fontFamily: 'Lato'),
-              ),
-              Text(
-                '953874573249030',
-                style: TextStyle(
-                    fontSize: 24.0,
-                    color: Color(0xff3596be),
-                    fontFamily: 'Lato'),
-              ),
-              ElevatedButton(
-                  onPressed: () {
-                    print('present');
-                  },
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.green,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Text('Present'),
-                  ))
-            ]),
+        child: Center(
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  'PESU',
+                  style: TextStyle(
+                      fontSize: 36.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue,
+                      fontFamily: 'Lato'),
+                ),
+                Image.asset(
+                  'assets/images/_MG_7737 - Copy.jpg',
+                  height: 200.0,
+                  width: 200.0,
+                ),
+                Text(
+                  'Rojas',
+                  style: TextStyle(
+                      fontSize: 24.0,
+                      color: Color(0xff3596be),
+                      fontFamily: 'Lato'),
+                ),
+                Text(
+                  'PES3328304938092',
+                  style: TextStyle(
+                      fontSize: 24.0,
+                      color: Color(0xff3596be),
+                      fontFamily: 'Lato'),
+                ),
+                Text(
+                  '953874573249030',
+                  style: TextStyle(
+                      fontSize: 24.0,
+                      color: Color(0xff3596be),
+                      fontFamily: 'Lato'),
+                ),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                          print("That is bad");
+                        },
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.green,
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Text('Present'),
+                        )),
+                    ElevatedButton(
+                      onPressed: () {
+                          print("That is great");
+                        },
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.red,
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Text('Absent'),
+                        )),
+
+                  ],
+                )
+              ]),
+        ),
       ),
     );
   }
